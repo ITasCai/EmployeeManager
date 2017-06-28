@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using EmployeeManagerDAL;
-
+using EmployeeManagerModer;
 
 namespace EmployeeManagerBLL
 {
@@ -32,5 +32,16 @@ namespace EmployeeManagerBLL
         {
             return EmployeeDAL.GetEmpNameDAL(name);
         }
+
+        /// <summary>
+        /// 添加数据
+        /// </summary>
+        /// <param name="Emp"></param>
+        /// <returns></returns>
+        public static int AddBLL(Employee Emp)
+        {
+            return EmployeeDAL.AddDAL(Emp);
+        }
+
         }
 }

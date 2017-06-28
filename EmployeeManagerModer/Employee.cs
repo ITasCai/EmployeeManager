@@ -9,7 +9,7 @@ namespace EmployeeManagerModer
     /// <summary>
     /// 员工类
     /// </summary>
-    class Employee
+  public  class Employee
     {
         /// <summary>
         /// 员工编号

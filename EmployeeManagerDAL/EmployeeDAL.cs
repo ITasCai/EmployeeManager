@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using EmployeeManagerCommon;
+using EmployeeManagerModer;
 
 namespace EmployeeManagerDAL
 {
@@ -35,5 +36,24 @@ namespace EmployeeManagerDAL
             DataSet da = SqlHelper.ExecuteDataSet(CommandType.Text,str,null);
             return da;
         }
+
+        /// <summary>
+        /// 添加数据
+        /// </summary>
+        /// <param name="Emp"></param>
+        /// <returns></returns>
+        public static int AddDAL(Employee Emp) {
+            string str = @"INSERT INTO dbo.Employee ( EmpName , deptID , EmpBirthday , Empphone )
+                          VALUES  (@EmpName,@deptID,@EmpBirthday,@Empphone)";
+            SqlParameter[] pa = new SqlParameter[] {
+                 new SqlParameter("@EmpName",Emp.EmpName),
+                 new SqlParameter("@deptID",Emp.DeptID),
+                 new SqlParameter("@EmpBirthday",Emp.EmpBirthday),
+                 new SqlParameter("@Empphone",Emp.Empphone),
+            };
+            int num = SqlHelper.ExecuteNonQuery(CommandType.Text,str,pa);
+            return num;
         }
-}
+
+        }
+   }

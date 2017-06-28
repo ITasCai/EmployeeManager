@@ -38,16 +38,16 @@
             this.EmpBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpshow = new System.Windows.Forms.GroupBox();
-            this.lblEmpID = new System.Windows.Forms.Label();
-            this.txtEmpID = new System.Windows.Forms.TextBox();
-            this.lblname = new System.Windows.Forms.Label();
-            this.txtname = new System.Windows.Forms.TextBox();
-            this.lbldeptName = new System.Windows.Forms.Label();
-            this.cmbdeptName = new System.Windows.Forms.ComboBox();
-            this.lblEmpBirthday = new System.Windows.Forms.Label();
-            this.txtEmpBirthday = new System.Windows.Forms.TextBox();
-            this.lblEmpphone = new System.Windows.Forms.Label();
             this.txtEmpphone = new System.Windows.Forms.TextBox();
+            this.lblEmpphone = new System.Windows.Forms.Label();
+            this.txtEmpBirthday = new System.Windows.Forms.TextBox();
+            this.lblEmpBirthday = new System.Windows.Forms.Label();
+            this.cmbdeptName = new System.Windows.Forms.ComboBox();
+            this.lbldeptName = new System.Windows.Forms.Label();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.lblname = new System.Windows.Forms.Label();
+            this.txtEmpID = new System.Windows.Forms.TextBox();
+            this.lblEmpID = new System.Windows.Forms.Label();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnxg = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
@@ -146,75 +146,12 @@
             this.grpshow.TabStop = false;
             this.grpshow.Text = "员工管理";
             // 
-            // lblEmpID
+            // txtEmpphone
             // 
-            this.lblEmpID.AutoSize = true;
-            this.lblEmpID.Location = new System.Drawing.Point(6, 28);
-            this.lblEmpID.Name = "lblEmpID";
-            this.lblEmpID.Size = new System.Drawing.Size(59, 12);
-            this.lblEmpID.TabIndex = 0;
-            this.lblEmpID.Text = "员工编号:";
-            // 
-            // txtEmpID
-            // 
-            this.txtEmpID.Location = new System.Drawing.Point(72, 18);
-            this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.ReadOnly = true;
-            this.txtEmpID.Size = new System.Drawing.Size(100, 21);
-            this.txtEmpID.TabIndex = 1;
-            // 
-            // lblname
-            // 
-            this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(189, 27);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(59, 12);
-            this.lblname.TabIndex = 2;
-            this.lblname.Text = "员工姓名:";
-            // 
-            // txtname
-            // 
-            this.txtname.Location = new System.Drawing.Point(254, 20);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(100, 21);
-            this.txtname.TabIndex = 3;
-            // 
-            // lbldeptName
-            // 
-            this.lbldeptName.AutoSize = true;
-            this.lbldeptName.Location = new System.Drawing.Point(374, 27);
-            this.lbldeptName.Name = "lbldeptName";
-            this.lbldeptName.Size = new System.Drawing.Size(59, 12);
-            this.lbldeptName.TabIndex = 4;
-            this.lbldeptName.Text = "部门名称:";
-            // 
-            // cmbdeptName
-            // 
-            this.cmbdeptName.FormattingEnabled = true;
-            this.cmbdeptName.Items.AddRange(new object[] {
-            "财务部",
-            "销售部",
-            "技术部"});
-            this.cmbdeptName.Location = new System.Drawing.Point(440, 20);
-            this.cmbdeptName.Name = "cmbdeptName";
-            this.cmbdeptName.Size = new System.Drawing.Size(121, 20);
-            this.cmbdeptName.TabIndex = 5;
-            // 
-            // lblEmpBirthday
-            // 
-            this.lblEmpBirthday.AutoSize = true;
-            this.lblEmpBirthday.Location = new System.Drawing.Point(8, 60);
-            this.lblEmpBirthday.Name = "lblEmpBirthday";
-            this.lblEmpBirthday.Size = new System.Drawing.Size(59, 12);
-            this.lblEmpBirthday.TabIndex = 6;
-            this.lblEmpBirthday.Text = "出生年月:";
-            // 
-            // txtEmpBirthday
-            // 
-            this.txtEmpBirthday.Location = new System.Drawing.Point(72, 50);
-            this.txtEmpBirthday.Name = "txtEmpBirthday";
-            this.txtEmpBirthday.Size = new System.Drawing.Size(100, 21);
-            this.txtEmpBirthday.TabIndex = 7;
+            this.txtEmpphone.Location = new System.Drawing.Point(254, 51);
+            this.txtEmpphone.Name = "txtEmpphone";
+            this.txtEmpphone.Size = new System.Drawing.Size(100, 21);
+            this.txtEmpphone.TabIndex = 9;
             // 
             // lblEmpphone
             // 
@@ -225,12 +162,71 @@
             this.lblEmpphone.TabIndex = 8;
             this.lblEmpphone.Text = "手机号:";
             // 
-            // txtEmpphone
+            // txtEmpBirthday
             // 
-            this.txtEmpphone.Location = new System.Drawing.Point(254, 51);
-            this.txtEmpphone.Name = "txtEmpphone";
-            this.txtEmpphone.Size = new System.Drawing.Size(100, 21);
-            this.txtEmpphone.TabIndex = 9;
+            this.txtEmpBirthday.Location = new System.Drawing.Point(72, 50);
+            this.txtEmpBirthday.Name = "txtEmpBirthday";
+            this.txtEmpBirthday.Size = new System.Drawing.Size(100, 21);
+            this.txtEmpBirthday.TabIndex = 7;
+            // 
+            // lblEmpBirthday
+            // 
+            this.lblEmpBirthday.AutoSize = true;
+            this.lblEmpBirthday.Location = new System.Drawing.Point(8, 60);
+            this.lblEmpBirthday.Name = "lblEmpBirthday";
+            this.lblEmpBirthday.Size = new System.Drawing.Size(59, 12);
+            this.lblEmpBirthday.TabIndex = 6;
+            this.lblEmpBirthday.Text = "出生年月:";
+            // 
+            // cmbdeptName
+            // 
+            this.cmbdeptName.FormattingEnabled = true;
+            this.cmbdeptName.Location = new System.Drawing.Point(440, 20);
+            this.cmbdeptName.Name = "cmbdeptName";
+            this.cmbdeptName.Size = new System.Drawing.Size(121, 20);
+            this.cmbdeptName.TabIndex = 5;
+            // 
+            // lbldeptName
+            // 
+            this.lbldeptName.AutoSize = true;
+            this.lbldeptName.Location = new System.Drawing.Point(374, 27);
+            this.lbldeptName.Name = "lbldeptName";
+            this.lbldeptName.Size = new System.Drawing.Size(59, 12);
+            this.lbldeptName.TabIndex = 4;
+            this.lbldeptName.Text = "部门名称:";
+            // 
+            // txtname
+            // 
+            this.txtname.Location = new System.Drawing.Point(254, 20);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(100, 21);
+            this.txtname.TabIndex = 3;
+            // 
+            // lblname
+            // 
+            this.lblname.AutoSize = true;
+            this.lblname.Location = new System.Drawing.Point(189, 27);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(59, 12);
+            this.lblname.TabIndex = 2;
+            this.lblname.Text = "员工姓名:";
+            // 
+            // txtEmpID
+            // 
+            this.txtEmpID.Location = new System.Drawing.Point(72, 18);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.ReadOnly = true;
+            this.txtEmpID.Size = new System.Drawing.Size(100, 21);
+            this.txtEmpID.TabIndex = 1;
+            // 
+            // lblEmpID
+            // 
+            this.lblEmpID.AutoSize = true;
+            this.lblEmpID.Location = new System.Drawing.Point(6, 28);
+            this.lblEmpID.Name = "lblEmpID";
+            this.lblEmpID.Size = new System.Drawing.Size(59, 12);
+            this.lblEmpID.TabIndex = 0;
+            this.lblEmpID.Text = "员工编号:";
             // 
             // btnadd
             // 
@@ -240,6 +236,7 @@
             this.btnadd.TabIndex = 5;
             this.btnadd.Text = "添加";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnxg
             // 

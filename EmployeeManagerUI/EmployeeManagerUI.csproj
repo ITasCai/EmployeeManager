@@ -84,6 +84,10 @@
       <Project>{f5189af1-bc8e-4ae8-a6ed-e1cc828b07eb}</Project>
       <Name>EmployeeManagerBLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagerModer\EmployeeManagerModer.csproj">
+      <Project>{2b3cc492-9fb7-4e63-9afe-a995a4d0a952}</Project>
+      <Name>EmployeeManagerModer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
