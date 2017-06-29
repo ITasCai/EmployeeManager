@@ -73,12 +73,12 @@ namespace EmployeeManagerUI
         /// <param name="e"></param>
         private void btnadd_Click(object sender, EventArgs e)
         {
-           
+            IfNull();
+
             try
             {
-               
-                if (IfNull()!=true)
-                {
+
+                
                     Employee em = new Employee();
                     em.EmpName = txtname.Text.Trim();
                     em.DeptID = Convert.ToInt32(cmbdeptName.SelectedValue);
@@ -94,9 +94,9 @@ namespace EmployeeManagerUI
                     {
                         MessageBox.Show("添加失败");
                     }
-                }
-             
-              
+                
+
+
             }
             catch (Exception ex)
             {
@@ -108,26 +108,103 @@ namespace EmployeeManagerUI
         }
 
 
-        public  bool IfNull()
+        public void IfNull()
         {
             if (string.IsNullOrEmpty(txtname.Text))
             {
                 MessageBox.Show("姓名不能为空");
-                
-            
+                return;
+
             }
-           if (string.IsNullOrEmpty(txtEmpBirthday.Text))
+            if (string.IsNullOrEmpty(txtEmpBirthday.Text))
             {
                 MessageBox.Show("出生日期不能为空");
-                
+                return;
 
             }
             if (string.IsNullOrEmpty(txtEmpphone.Text))
             {
                 MessageBox.Show("手机号不能为空");
-               
+                return;
             }
-            return true;
+         
+        }
+
+        private void dgvshow_Click(object sender, EventArgs e)
+        {
+            int index = dgvshow.CurrentCell.RowIndex;
+            txtEmpID.Text = dgvshow.Rows[index].Cells[0].Value.ToString();
+            txtname.Text = dgvshow.Rows[index].Cells[1].Value.ToString();
+            cmbdeptName.Text = dgvshow.Rows[index].Cells[2].Value.ToString();
+            txtEmpBirthday.Text = dgvshow.Rows[index].Cells[3].Value.ToString();
+            txtEmpphone.Text = dgvshow.Rows[index].Cells[4].Value.ToString();
+        }
+
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnxg_Click(object sender, EventArgs e)
+        {
+
+            IfNull();
+
+            try
+            {
+                    Employee em = new Employee();
+                    em.EmpName = txtname.Text.Trim();
+                    em.DeptID = Convert.ToInt32(cmbdeptName.SelectedValue);
+                    em.EmpBirthday = Convert.ToDateTime(txtEmpBirthday.Text.Trim());
+                    em.Empphone = txtEmpphone.Text.Trim();
+                    em.EmpID = Convert.ToInt32(txtEmpID.Text.Trim());
+
+                    int num = EmployeeBLL.ModificationBLL(em);
+                    if (num > 0)
+                    {
+                        MessageBox.Show("修改成功");
+                    }
+                    else
+                    {
+                        MessageBox.Show("修改失败");
+                    }
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            IfNull();
+            try
+            {
+                Employee em = new Employee();
+                em.EmpID = Convert.ToInt32(txtEmpID.Text.Trim());
+
+                int num = EmployeeBLL.DeleteBLL(em);
+                if (num > 0)
+                {
+                    MessageBox.Show("删除成功");
+                }
+                else
+                {
+                    MessageBox.Show("删除失败");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

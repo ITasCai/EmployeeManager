@@ -55,5 +55,37 @@ namespace EmployeeManagerDAL
             return num;
         }
 
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="Emp"></param>
+        /// <returns></returns>
+        public static int ModificationDAL(Employee Emp) {
+            string str = @"UPDATE dbo.Employee SET EmpName=@EmpName,deptID=@deptID,
+                            EmpBirthday=@EmpBirthday, Empphone=@Empphone WHERE EmpID=@EmpID";
+            SqlParameter[] pa = new SqlParameter[] {
+                 new SqlParameter("@EmpName",Emp.EmpName),
+                 new SqlParameter("@deptID",Emp.DeptID),
+                 new SqlParameter("@EmpBirthday",Emp.EmpBirthday),
+                 new SqlParameter("@Empphone",Emp.Empphone),
+                 new SqlParameter("@EmpID",Emp.EmpID)
+            };
+            int num = SqlHelper.ExecuteNonQuery(CommandType.Text, str, pa);
+            return num;
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="Emp"></param>
+        /// <returns></returns>
+        public static int DeleteDAL(Employee Emp)
+        {
+            string str = "DELETE FROM dbo.Employee WHERE EmpID=@EmpID";
+            SqlParameter pa = new SqlParameter("@EmpID",Emp.EmpID);
+            int num = SqlHelper.ExecuteNonQuery(CommandType.Text, str, pa);
+            return num;
+        }
+
         }
    }

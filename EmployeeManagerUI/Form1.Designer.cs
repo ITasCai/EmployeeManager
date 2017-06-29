@@ -96,6 +96,7 @@
             this.dgvshow.RowTemplate.Height = 23;
             this.dgvshow.Size = new System.Drawing.Size(544, 150);
             this.dgvshow.TabIndex = 3;
+            this.dgvshow.Click += new System.EventHandler(this.dgvshow_Click);
             // 
             // EmpID
             // 
@@ -246,6 +247,7 @@
             this.btnxg.TabIndex = 6;
             this.btnxg.Text = "修改";
             this.btnxg.UseVisualStyleBackColor = true;
+            this.btnxg.Click += new System.EventHandler(this.btnxg_Click);
             // 
             // btndelete
             // 
@@ -255,6 +257,7 @@
             this.btndelete.TabIndex = 7;
             this.btndelete.Text = "删除";
             this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnno
             // 

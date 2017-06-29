@@ -43,5 +43,26 @@ namespace EmployeeManagerBLL
             return EmployeeDAL.AddDAL(Emp);
         }
 
+
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="Emp"></param>
+        /// <returns></returns>
+        public static int ModificationBLL(Employee Emp)
+        {
+            return EmployeeDAL.ModificationDAL(Emp);
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="Emp"></param>
+        /// <returns></returns>
+        public static int DeleteBLL(Employee Emp)
+        {
+            return EmployeeDAL.DeleteDAL(Emp);
+        }
+
         }
 }
